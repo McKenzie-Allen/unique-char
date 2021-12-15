@@ -17,7 +17,8 @@ console.log(uniqueLetters("add"))
 console.log(uniqueLetters("apple"))
 console.log(uniqueLetters("sponge"))
 
-// // Epic Joke
+// Epic Joke
+// Pumpkin Splice
 
 // let ingredients = ["sugar", "water", "cinnamon", "cloves", "ginger", "nutmeg", "pumpkin"];
 
@@ -30,3 +31,16 @@ console.log(uniqueLetters("sponge"))
 //     return arr
 // }
 // console.log(pumpkinSpiceLatte(ingredients))
+
+function hasUniqueWords(sent) {
+    let checkArr = new Set([])
+    let sentArr = sent.split(" ")
+    console.log(sentArr)
+    for (i = 0; i < sentArr.length; i++) {
+        checkArr.add(sentArr[i])
+    }
+    return (sentArr.length === checkArr.size)
+}
+
+console.log(hasUniqueWords("there are sponges in my head, and they're green with the flavor of lime Kool-aid"))
+console.log(hasUniqueWords("there are sponges in my head, and they are green with the flavor of lime Kool-aid"))
